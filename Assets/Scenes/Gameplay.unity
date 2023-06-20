@@ -275,8 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1f43829ebab714c9e172af1d5dbda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSizeX: 161
-  gridSizeY: 91
   terrainParent: {fileID: 2131397983}
   waterTilePrefab: {fileID: 6359928678468219729, guid: 6d227875ce08a8f4399210a95bbd7779, type: 3}
   grassTilePrefab: {fileID: 4140595418385844174, guid: 6885d972dbe76ec459bd66e06ba9038c, type: 3}
@@ -548,9 +546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minX: 0
-  maxX: 160
+  maxX: 80
   minY: 0
-  maxY: 90
+  maxY: 45
 --- !u!1 &2131397983
 GameObject:
   m_ObjectHideFlags: 0

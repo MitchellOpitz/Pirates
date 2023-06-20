@@ -2,25 +2,24 @@ using UnityEngine;
 
 public class TerrainGround : MonoBehaviour
 {
-    public int gridSizeX = 10;
-    public int gridSizeY = 10;
     public GameObject terrainParent;
     public GameObject waterTilePrefab;
     public GameObject grassTilePrefab;
     public GameObject sandTilePrefab;
 
     private GameObject[,] terrainGrid;
+    private int gridSizeX = (int)PlayableArea.Instance.maxX;
+    private int gridSizeY = (int)PlayableArea.Instance.maxY;
 
     public void Generate()
     {
-        terrainGrid = new GameObject[gridSizeX, gridSizeY];
+        terrainGrid = new GameObject[gridSizeX + 1, gridSizeY + 1];
         GameObject terrainParentObj = new GameObject("Ground");
         terrainParentObj.transform.parent = terrainParent.transform;
-        terrainParentObj.transform.position = new Vector3(0, 0, -1);
 
-        for (int x = 0; x < gridSizeX; x++)
+        for (int x = 0; x < gridSizeX + 1; x++)
         {
-            for (int y = 0; y < gridSizeY; y++)
+            for (int y = 0; y < gridSizeY + 1; y++)
             {
                 // Generate tile types randomly or based on specific rules
                 GameObject tilePrefab = GetRandomTilePrefab();
