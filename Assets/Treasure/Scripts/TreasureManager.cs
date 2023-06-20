@@ -21,7 +21,7 @@ public class TreasureManager : MonoBehaviour
         // Generate a random position within the playable area
         float randomX = Random.Range(PlayableArea.Instance.minX, PlayableArea.Instance.maxX);
         float randomY = Random.Range(PlayableArea.Instance.minY, PlayableArea.Instance.maxY);
-        treasurePosition = new Vector3(randomX, randomY, 0f);
+        treasurePosition = new Vector3(randomX, randomY, -1f);
 
         // Instantiate the treasure object at the generated position
         GameObject newTreasure = Instantiate(treasurePrefab, treasurePosition, Quaternion.identity);
